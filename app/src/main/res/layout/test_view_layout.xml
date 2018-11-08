@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tv_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/apps_logo"/>
+    <com.fight.light.test.MyView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <com.kyw.demo.myview.TouchWithView
+        android:id= "@+id/touch_view"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+
+        android:text="嘎嘎嘎"
+        android:background="@color/colorPrimary"
+        />
+    <com.fight.light.widget.FlowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+           style="@style/TextViewNormal"
+            android:text="@string/app_name"
+            android:layout_width="30dp"
+            />
+        <TextView
+            style="@style/TextViewNormal"
+            android:layout_height="25dp"
+            android:layout_width="80dp"
+            android:text="HHHHHHHHHHHHHHH"/>
+
+        <TextView
+            style="@style/TextViewNormal"
+            android:layout_height="36dp"
+            android:layout_width="100dp"
+            android:text="hhhhhhhhhh"/>
+        <TextView
+            style="@style/TextViewWrap"
+            android:layout_width="60dp"
+            android:text="HHHAHHAHHHA"/>
+        <TextView
+            style="@style/TextViewWrap"
+            android:text="ssssssss"/>
+        <TextView
+            style="@style/TextViewWrap"
+            android:text="hhahssshhhah"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:layout_width="30dp"
+            android:text="hhahhahahhhaassshooop"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:text="科学"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:text="文化"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:text="设计"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:text="人才"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:text="人才"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:text="人才"/>
+        <TextView
+            style="@style/TextViewNormal"
+            android:text="."/>
+    </com.fight.light.widget.FlowLayout>
+</LinearLayout>

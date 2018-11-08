@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:drawable="@color/colorAccent"/>
+<item>
+    <bitmap
+        android:gravity="center"
+        android:id="@+id/bitmap_splash"
+        android:scaleType="centerInside"
+        android:width="180dp"
+        android:height="60dp"
+        android:src="@drawable/apps_logo_launch_l"/>
+
+</item>
+
+
+   <!-- <item>
+        <bitmap
+            android:id="@+id/bitmap_splash"
+            android:src="@mipmap/splash_bg">
+        </bitmap>
+    </item>
+    <item
+        android:top="@dimen/splash_logo_marginTop">
+        <bitmap
+            android:gravity="top"
+            android:src="@mipmap/splash_logo">
+        </bitmap>
+    </item>
+    <item
+        android:bottom="80dp">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@mipmap/splash_word">
+        </bitmap>
+    </item>-->
+
+
+</layer-list>
