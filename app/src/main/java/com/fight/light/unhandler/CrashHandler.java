@@ -111,14 +111,12 @@ public class CrashHandler implements UncaughtExceptionHandler{
 //			e.printStackTrace();
 			Log.e(TAG,"dump crash info failed");
 		}
-
-
 	}
 
 	private void dumpPhoneInfo(PrintWriter pw)  {
 		try {
 		PackageManager pm = mContext.getPackageManager();
-		PackageInfo pi = null;
+		PackageInfo pi;
 		pi = pm.getPackageInfo(mContext.getPackageName(),PackageManager.GET_ACTIVITIES);
 		pw.print("App Version: ");
 	    pw.print(pi.versionName);
