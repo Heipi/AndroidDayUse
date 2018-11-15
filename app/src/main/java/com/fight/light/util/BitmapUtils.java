@@ -1,6 +1,7 @@
 package com.fight.light.util;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -17,6 +18,7 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
+import android.util.LruCache;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -29,9 +31,6 @@ import java.io.IOException;
 
 public class BitmapUtils {
     private static final String TAG = BitmapUtils.class.getSimpleName();
-
-
-
 
 
     /**
@@ -211,7 +210,8 @@ public class BitmapUtils {
     public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
         int h = options.outHeight;
         int w = options.outWidth;
-        int inSampleSize = 0;
+        int inSampleSize = 1;
+        //满足宽高的最小一个
         if (h > reqHeight || w > reqWidth) {
             float ratioW = (float) w / reqWidth;
             float ratioH = (float) h / reqHeight;
@@ -220,7 +220,7 @@ public class BitmapUtils {
         inSampleSize = Math.max(1, inSampleSize);
         return inSampleSize;
     }
-
+    // inJustDecodeBounds 为true,BitmapFactory只会解析图片的原始宽/高,不会真正的加载图片
     public static Bitmap getSmallBitmap(String filePath, int reqWidth, int reqHeight) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
@@ -257,4 +257,16 @@ public class BitmapUtils {
     public byte[] compressBitmapQuiklySmallTo(String filePath, int maxLenth) {
         return compressBitmapSmallTo(filePath, 480, 800, maxLenth);
     }
+
+   public static Bitmap decodeSampleBitmapFromResource(Resources res,int resID,int reqWidth,int reqHeight){
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res,resID,options);
+        //calculate  inSampleSize
+        options.inSampleSize = calculateInSampleSize(options,reqWidth,reqHeight);
+        //Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res,resID,options);
+   }
+
 }
