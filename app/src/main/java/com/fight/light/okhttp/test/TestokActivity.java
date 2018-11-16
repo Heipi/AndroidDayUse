@@ -12,6 +12,7 @@ import com.fight.light.okhttp.RequestClient;
 import com.fight.light.okhttp.RequestParams;
 import com.fight.light.okhttp.callback.BitmapCallback;
 import com.fight.light.okhttp.callback.StringCallback;
+import com.fight.light.util.Md5Util;
 
 import okhttp3.Call;
 
@@ -30,6 +31,8 @@ public class TestokActivity extends BaseActivity implements View.OnClickListener
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button2).setOnClickListener(this);
         findViewById(R.id.button3).setOnClickListener(this);
+
+        Md5Util.hashKeyFormUrl("123");
     }
 
     @Override

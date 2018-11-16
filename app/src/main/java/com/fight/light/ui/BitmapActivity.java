@@ -32,6 +32,10 @@ public class BitmapActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bitmap);
 
+
+
+
+
         ButterKnife.bind(this);
         Log.e("TAG", ""+ ScreenUtil.getStatusHeight(this));
         Log.e("TAG2", ""+ScreenUtil.getStatusHeightByResId(this));

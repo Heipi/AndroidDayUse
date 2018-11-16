@@ -3,6 +3,8 @@ package com.fight.light.uncache;
 import android.graphics.Bitmap;
 import android.support.v4.util.LruCache;
 
+import okhttp3.internal.cache.DiskLruCache;
+
 /**
  * LruCache base implement
  */
@@ -34,7 +36,8 @@ public class UseLruCache  {
        return mLruCache.get(key);
     }
     //从缓存中删除指定的Bitmap
-    public void removeBitmapFromCache(String key){
+     public void removeBitmapFromCache(String key){
         mLruCache.remove(key);
     }
+
 }
