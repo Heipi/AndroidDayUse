@@ -1,4 +1,4 @@
-package com.fight.light.util;
+package com.light.diskcache;
 
 import android.util.Log;
 

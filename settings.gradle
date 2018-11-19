@@ -1,1 +1,1 @@
-include ':app', ':myview'
+include ':app', ':myview', ':diskcache'

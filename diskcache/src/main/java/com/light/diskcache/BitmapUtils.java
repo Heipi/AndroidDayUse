@@ -1,4 +1,4 @@
-package com.fight.light.util;
+package com.light.diskcache;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -18,7 +18,6 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
-import android.util.LruCache;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -270,7 +269,7 @@ public class BitmapUtils {
         return BitmapFactory.decodeResource(res,resID,options);
    }
 
-   public Bitmap decodeSampledBitmapFromFileDescriptor(FileDescriptor fd,int reqWidth,int reqHeight){
+   public static Bitmap decodeSampledBitmapFromFileDescriptor(FileDescriptor fd,int reqWidth,int reqHeight){
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeFileDescriptor(fd,null,options);

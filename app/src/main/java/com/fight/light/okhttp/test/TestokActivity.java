@@ -12,8 +12,6 @@ import com.fight.light.okhttp.RequestClient;
 import com.fight.light.okhttp.RequestParams;
 import com.fight.light.okhttp.callback.BitmapCallback;
 import com.fight.light.okhttp.callback.StringCallback;
-import com.fight.light.util.Md5Util;
-
 import okhttp3.Call;
 
 import static com.fight.light.okhttp.RequestClient.TYPE_GET;
@@ -27,12 +25,13 @@ public class TestokActivity extends BaseActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
       //  setContentView();
         setContentView(R.layout.activity_test3);
+        Log.d("MAX memory",(int) (Runtime.getRuntime().maxMemory()/1024)+"");
         img = (ImageView) findViewById(R.id.img);
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button2).setOnClickListener(this);
         findViewById(R.id.button3).setOnClickListener(this);
 
-        Md5Util.hashKeyFormUrl("123");
+       // Md5Util.hashKeyFormUrl("123");
     }
 
     @Override
