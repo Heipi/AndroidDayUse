@@ -1,7 +1,10 @@
 package com.fight.light.okhttp.test;
 
+import android.app.IntentService;
 import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.HandlerThread;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -32,6 +35,9 @@ public class TestokActivity extends BaseActivity implements View.OnClickListener
         findViewById(R.id.button3).setOnClickListener(this);
 
        // Md5Util.hashKeyFormUrl("123");
+
+
+
     }
 
     @Override
