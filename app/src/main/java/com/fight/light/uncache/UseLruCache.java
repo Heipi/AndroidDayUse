@@ -3,9 +3,7 @@ package com.fight.light.uncache;
 import android.graphics.Bitmap;
 import android.support.v4.util.LruCache;
 
-import com.fight.light.R;
 
-import okhttp3.internal.cache.DiskLruCache;
 
 /**
  * LruCache base implement
